@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+    <link rel="stylesheet" href="ind.css" type="text/css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+<body>
+
+  <!--header section start-->
+
+<header class="head">
+        
+  <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"> <span>MAX</span>WHEELS </a>
+
+      <nav class="navbar">
+
+        <a href="#home">Home</a>
+        <a href="#store">Store</a>
+        <a href="review">Review</a>
+        <a href="contact">Contact</a>
+      </nav>
+        <div id="login_btn">
+           <button class="btn">Login</button>
+           <i class="fa-solid fa-user"></i>
+         </div>
+</header>
+
+<!--header section end-->
+
+<!--text labmhgorgini-->
+
+<section class="home">
+  <div class="container">
+   <h2 data-text="&nbsp;LAMBORGHINI&nbsp;">&nbsp;LAMBORGHINI&nbsp;</h2>
+  </div>
+
+<!--image-->
+
+  <div class="image"  data-aos="fade-left">
+    <img src="images/lamb.png">
+     <h1 class="home-parallax" data-speed="-2"  data-aos="fade-right">LAMBORGHINI<br>GALLARDO LP560</h1><br>
+   
+     <p  data-aos="fade-left"> <b>MAXWHEELS</b> welcomes everyone. Buy your favourite car at a great discount now. 
+     Hurry up and <br>buy your dream car to go on 
+     trips with your family. Act now and enjoy your time with loved ones.
+    </p>
+  
+   <a id="exp" href="#" class="btn home-parallax" data-speed="5" data-aos="fade-down">Explore Car</a>  
+          </div>
+
+</section><br>
+
+
+<!--login form-->
+
+<section>
+
+  <div class="login-form-container">
+  
+   <span class="fas fa-times" id="close-login-form"></span>
+  
+      <form action="">
+       <h3>User Login</h3>
+     <input type="email" placeholder="email" class="box">
+     <input type="placeholder" placeholder="password" class="box">
+     <p>forget your password<a href="#">Click here</a></p>
+     <input type="submit" value="login now" class="btn">
+     <p>or login with</p>
+    
+   <div class="buttons">
+      <a href="#" class="btn">google</a>
+    <a href="#" class="btn">facebook</a>
+    </div>
+     <p>don't have an account <a href="#">create one</a></p>
+        </form>
+   </div>	   
+         
+     
+ 
+ 
+ </section>
+
+
+<script>
+
+  //navigationbar
+
+ let menu = document.querySelector('#menu-btn');
+ let navbar =  document.querySelector('.navbar');
+
+ menu.onclick = () => {
+  menu.classList.toggle('fa-times');
+  navbar.classList.toggle('active');
+ }
+
+/*loginform*/
+document.querySelector('#login_btn').onclick = () =>{
+  document.querySelector('.login-form-container').classList.toggle('active');
+}
+
+document.querySelector('#close-login-form').onclick = () =>{
+  document.querySelector('.login-form-container').classList.remove('active');
+}
+
+
+
+ window.onscroll = () =>{
+  
+  if(window.scrollY > 0){
+    document.querySelector('.head').classList.add('active');
+  }else{
+    document.querySelector('.head').classList.remove('active');
+  }
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('active');
+ }
+
+
+ window.onload = () =>{
+  
+  if(window.scrollY > 0){
+    document.querySelector('.head').classList.add('active');
+  }else{
+    document.querySelector('.head').classList.remove('active');
+  }
+  
+ }
+
+
+  </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+    </body>
+    </html>

@@ -1,0 +1,456 @@
+:root {
+    --yellow: #f9d806;
+    --light-yellow: #ffee80;
+    --black: #130f40;
+    --light-color: #666;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+    height: 200rem;
+   
+}
+
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    background: var(--light-yellow);
+    color: black;
+    font-weight: 600;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+.btn:hover {
+    background: var(--yellow);
+}
+
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgb(29, 27, 27);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 9%;
+}
+
+.head .logo {
+    font-size: 2.5rem;
+    color: var(--yellow);
+    font-weight: bolder;
+}
+.head .logo .span {
+    color: var(--green);
+}
+.head .navbar a {
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: yellow;
+}
+.head .navbar a:hover {
+    color: darkgray;
+}
+.head .btn {
+    margin-top: 0;
+    cursor: pointer;
+}
+.head #login_btn i {
+   font-size: 2rem;
+   color: var(--light-yellow);
+   cursor: pointer;
+   /*display: none;*/
+
+}
+#menu-btn {
+    font-size: 2.5rem;
+    color: yellow;
+    cursor: pointer;
+}
+
+.head.active {
+   box-shadow: white;
+   padding: 2rem 9%;
+}
+
+/*text lambhogini*/
+
+.home{
+	min-height: 43rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	
+}
+.home .container{
+	text-align: center;
+	
+}
+
+.home .container h2    {
+		position: relative;
+		left: 3%;
+		font-size: 10rem;
+		color: #222;
+		 letter-spacing: 0.5rem;
+		}
+		
+		h2::before {
+		content: attr(data-text);
+		position: absolute;
+		color: #fff;
+		width: 350px;
+		overflow: hidden;
+		white-space: nowrap;
+		border-right: 4px solid #fff;
+		animation: animate 8s linear infinite;
+		filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 20px #fff);
+		}
+		
+		@keyframes animate 
+		{
+		0%,10%,100% 
+		{
+		width: 0;
+		}
+		70%,90% 
+		{
+		width: 100%;
+		}
+		
+		}
+		
+.home .image{
+    min-height: 55rem;
+    position: absolute;
+    top: 5%;
+    left: 8%;
+}
+
+
+.home .image img{
+            
+    width: 90%;
+    height: 90;
+            
+        }
+        
+        .home .image h1  {
+            position: absolute;
+                left: 39%;
+                top: 82%;
+                font-size: 2.1rem;
+                
+                 letter-spacing: 0.2rem;
+             
+            color: var(--yellow);
+        }
+        
+        .home a#exp {
+            position: absolute;
+                left: 39%;
+                top: 98%;
+        }
+        
+        .home .image p {
+	
+            position: absolute;
+                    left: 5%;
+                    top: 90%;
+                    font-size: 2rem;
+                    
+                     letter-spacing: 0.1rem;
+                 
+                color: #fff;
+            }
+
+/*loginform*/
+
+.login-form-container {
+	position: fixed;
+	top: -105%; left: 0%;
+	z-index: 1000;
+	height: 100%;
+	width: 100%;
+	background: rgba(255,255,255,.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	
+}
+
+.login-form-container.active {
+   top:0;
+   opacity: 1;   
+}
+
+
+
+
+
+
+
+.login-form-container form {
+	padding: 1rem;
+	margin: 1rem;
+	border-radius: .5rem;
+	box-shadow: var(--box-shadow);
+	background: #fff;
+	border: var(--border);
+	text-align: center;
+	width: 40rem;
+	
+}
+
+.login-form-container form .buttons {
+	
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	
+}
+
+.login-form-container form .btn {
+	display: block;
+	width: 100%;
+	margin: 1rem 0;
+	
+}
+
+.login-form-container form h3 {
+	color: var(--black);
+	font-size: 2.5rem;
+	padding-bottom: 1rem;
+	text-transform: uppercase;
+}
+
+.login-form-container form .box {
+	margin: 1rem 0;
+	width: 100%;
+	text-transform: none;
+	color: var(--black);
+	font-size: 1.6rem;
+	padding: 1rem 1.2rem;
+	border: var(--border);
+	border-radius: .5rem;
+}
+
+.login-form-container form p {
+	padding: 1rem 0;
+	font-size: 1.5rem;
+	color: var(--light-color);
+}
+.login-form-container form p a {
+	color: var(--yellow);
+	text-decoration: underline;
+}
+
+.login-form-container #close-login-form {
+	position: absolute;
+	top: 1.5rem; right: 2.5rem;
+	font-size: 5rem;
+	color: var(--black);
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media(max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+    .head{
+        padding: 2rem;
+    }
+    .head.active {
+        
+        padding: 2rem;
+     }
+     
+}
+@media(max-width:768px) {
+
+    #menu-btn {
+        display: block;
+    }
+
+    #menu-btn.fa-times {
+      transform: rotate(180deg);
+    }
+
+    .head #login_btn i {
+        display: yellow;
+    }
+
+    .head #login_btn .btn {
+        display: none;
+    }
+
+    .head .navbar {
+        position: absolute;
+        top:99%; left:0; right:0;
+        background: black;
+        border-top: var(--border);
+       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+ 
+    .head .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+
+
+
+    .head .navbar a {
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+}
+
+
+
+ @media(max-width:450px) {
+    html{
+        font-size: 50%;
+    }
+ }
+
+ /*text lambhorghini*/
+
+/*TAB SCREEN SIZE*/
+
+
+ @media (max-width: 991px){
+    .home .container h2{
+       font-size: 60px;
+   }
+	  
+
+   .home .image{
+    position: absolute;
+ top: 14%;
+ 
+}
+.home .image h1  {
+ position: absolute;
+     left: 33%;
+     top: 82%;
+   }
+
+
+   .home .image p {
+	
+    position: absolute;
+            left: -4%;
+            top: 93%;
+            font-size: 15px;
+            
+             
+    }
+
+ .home a#exp {
+ position: absolute;
+     left: 35%;
+     top: 101%;
+}
+
+
+}
+		
+   /*PHONE SCREEN SIZE*/
+
+		 @media (max-width: 786px){
+    .home .container h2{
+       font-size: 30px;
+       min-height: 5vh;
+   }
+   .home .image{
+    position: absolute;
+ top: 25%;
+ 
+    }
+    .home .image h1  {
+        position: absolute;
+            left: 29%;
+            top: 49%;
+          }
+
+          .home .image p {
+	
+            position: absolute;
+                    left: 1%;
+                    top: 62%;
+                    font-size: 10px;
+                    
+                     
+            }
+
+
+        .home a#exp {
+        position: absolute;
+            left: 31%;
+            top: 73%;
+    }
+
+
+
+
+
+
+	  }
+	  
+	   @media (max-width: 450px){
+   .home .container h2{
+       font-size: 50%;
+   }
+	  }
